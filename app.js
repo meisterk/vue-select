@@ -9,9 +9,10 @@ const SelectApp = {
             ausgewaehlt:'Milch'       
         }
     },
+    
     computed: {
         einheit(){
-            for(i in this.auswahlmoeglichkeiten){
+            for(let i=0; i<this.auswahlmoeglichkeiten.length; i++){
                 if(this.auswahlmoeglichkeiten[i].name === this.ausgewaehlt){
                     return this.auswahlmoeglichkeiten[i].einheit;
                 }
